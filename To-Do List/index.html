@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Aprendizado Javascript</title>
+  <link rel=stylesheet href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class = "containerAll">
+    <h1>Lista de Tarefas</h1>
+    <h2>Organize o que você tem para fazer hoje</h2>
+    <section class = "listContainer">
+      <header class = "headerList">
+        <p class = "taskCounter">Total: <b id = "totalItems">0</b></p>
+        <p class = "taskCounter">Restantes: <b id = "leftItems">0</b></p>
+        <p class = "taskCounter">Feito: <b id = "doneItems">0</b></p>
+      </header>
+      <section class = "itemsList"></section>
+      <button class = "addItem" onclick="createItem()">Adicionar tarefa</button>
+    </section>
+  </div>
+</body>
+
+<script src = 'script.js'></script>
+</html>

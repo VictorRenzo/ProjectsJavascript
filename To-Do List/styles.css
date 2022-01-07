@@ -1,0 +1,91 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+html{
+  width: 100vw;
+  height: 100vh;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(236, 205, 233);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.containerAll{
+  height: 100%;
+  width: 100%;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1, h2{
+  color: #190b28;
+}
+
+.listContainer{
+  width: 50rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerList{
+  width: 100%;
+  padding: 1rem;
+  height: 2rem;
+  background-color:rgb(193, 140, 252);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 8px;
+
+}
+
+.taskCounter{
+  font-size: 12px;
+}
+
+.itemsList{
+  width: 100%;
+  margin: 1rem;
+  background: rgb(193,140,252);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.addItem{
+  margin-right: -1rem;
+  align-self: flex-end;
+  padding: 0.6rem;
+  background-color: rgba(214, 32, 59, 0.59);
+  border: none;
+  border-radius: 0.8rem;
+}
+
+.addItem:hover{
+  background-color: rgb(247, 81, 80);
+  cursor: pointer;
+}
+
+.item{
+  width: 100%;
+  height: 2rem;
+  background: white;
+  margin-top: 1rem;
+}
