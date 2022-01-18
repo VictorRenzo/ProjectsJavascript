@@ -4,38 +4,6 @@ function doneItem(){
 function removeItem(){
 }
 
-function createItem(){
-  let taskItemContainer = document.createElement("div");
-  taskItemContainer.classList.add("taskItemContainer");
-  taskItemContainer.classList.add("undone");
-
-  let taskItemTitle = document.createElement("textarea");
-  taskItemTitle.placeholder = "Título da tarefa";
-  taskItemTitle.classList.add("itemTitle");
-  taskItemContainer.appendChild(taskItemTitle);
-  
-  let taskItemDescription = document.createElement("textarea");
-  taskItemDescription.placeholder = "Descrição da tarefa";
-  taskItemDescription.classList.add("itemDescription");
-  taskItemContainer.appendChild(taskItemDescription);
-
-  let totalElement = document.querySelector("#totalItems");
-  totalElement.innerText++;
-
-  let taskItemAdd = document.createElement("button");
-  taskItemAdd.innerText = "Confirmar";
-  taskItemAdd.classList.add("buttonConfirm");
-  taskItemContainer.appendChild(taskItemAdd);
-  
-  taskItemAdd.addEventListener("click", function(){confirmAddItem(taskItemContainer)});
-
-  let leftItems = document.querySelector("#leftItems");
-  leftItems.innerText++;
-
-  let itemsList = document.querySelector(".itemsList");
-  itemsList.prepend(taskItemContainer);
-}
-
 function createItemModal(){
   let modal = document.createElement("div");
   modal.classList.add("modal");
@@ -109,10 +77,4 @@ function closeModal(){
   document.querySelector(".modal").remove();
   document.querySelector(".addItem").disabled = false;
 }
-
-function valorInput(e){
-  let x = e.target.value;
-  console.log(x);
-}
-
 
