@@ -209,6 +209,9 @@ h1, h2{
 .taskContainer{
   margin-bottom: 1rem;
   border-bottom: 2px solid rgba(148, 145, 145, 0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .taskTitle{
   font-family:'Cormorant Garamond', 'Roboto', serif;
@@ -220,4 +223,15 @@ h1, h2{
   font-family:'Cormorant Garamond', 'Roboto', serif;
   font-size: 1.8rem;
   color:hsla(0, 3%, 7%, 0.8);
+}
+
+.removeButton{
+  margin: 1rem;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: black;
+  font-size: 8px;
+  background-color: rgba(214, 32, 59, 0.59);
 }

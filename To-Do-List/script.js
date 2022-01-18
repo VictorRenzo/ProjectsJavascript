@@ -1,7 +1,9 @@
 function doneItem(){
 }
 
-function removeItem(){
+function removeItem(taskContainer, title){
+  taskContainer.remove();
+  window.localStorage.removeItem(title);
 }
 
 function createItemModal(){
@@ -63,29 +65,8 @@ function confirmAddItem(taskParent){
     return;
   }
 
-  let taskContainer = document.createElement("div");
-  taskContainer.classList.add("taskContainer");
-
-  let taskTitle = document.createElement("p");
-  let taskDescription = document.createElement("p");
-  taskTitle.classList.add("taskTitle");
-  taskDescription.classList.add("taskDescription");
-
-  taskTitle.innerText = title;
-  taskDescription.innerText = description;
-
-  taskContainer.append(taskTitle);
-  taskContainer.append(taskDescription);
-
-  let itemsList = document.querySelector(".itemsList");
-  itemsList.prepend(taskContainer);
- 
-  
-  let totalElement = document.querySelector("#totalItems");
-  totalElement.innerText++;
-  let leftItems = document.querySelector("#leftItems");
-  leftItems.innerText++;
-
+  createTaskHTML(title, description);
+  window.localStorage.setItem(title, description);
   closeModal();
 } 
 
@@ -94,3 +75,45 @@ function closeModal(){
   document.querySelector(".addItem").disabled = false;
 }
 
+function getStorage() {
+  let keys = Object.keys(localStorage);
+  keys.forEach( (key) => {
+    createTaskHTML(key, window.localStorage.getItem(key));
+  });
+}
+
+function createTaskHTML(title, description){
+  let taskContainer = document.createElement("div");
+  taskContainer.classList.add("taskContainer");
+
+  let taskTitle = document.createElement("p");
+  let taskDescription = document.createElement("p");
+  taskTitle.classList.add("taskTitle");
+  taskDescription.classList.add("taskDescription");
+
+  let removeButton = document.createElement("button");
+  removeButton.innerText = "X";
+  removeButton.classList.add("removeButton");
+  removeButton.addEventListener("click", function(){removeItem(taskContainer, title);});
+
+  taskTitle.innerText = title;
+  taskDescription.innerText = description;
+
+  taskContainer.append(removeButton);
+
+  let taskContainerText = document.createElement("div");
+  taskContainerText.classList.add("taskContainerText");
+  taskContainer.prepend(taskContainerText);
+  taskContainerText.append(taskTitle);
+  taskContainerText.append(taskDescription);
+
+  let itemsList = document.querySelector(".itemsList");
+  itemsList.prepend(taskContainer);
+ 
+  let totalElement = document.querySelector("#totalItems");
+  totalElement.innerText++;
+  let leftItems = document.querySelector("#leftItems");
+  leftItems.innerText++;
+}
+
+getStorage();
