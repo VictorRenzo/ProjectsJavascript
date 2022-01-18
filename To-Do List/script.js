@@ -58,17 +58,33 @@ function createItemModal(){
 function confirmAddItem(taskParent){
   let title = taskParent.childNodes[0].value;
   let description = taskParent.childNodes[1].value;
-  let taskTitle = document.createElement("h3");
-  let taskDescription = document.createElement("h4");
+   if (title == "" || description == ""){
+    window.alert("Don't leave blank spaces");
+    return;
+  }
+
+  let taskContainer = document.createElement("div");
+  taskContainer.classList.add("taskContainer");
+
+  let taskTitle = document.createElement("p");
+  let taskDescription = document.createElement("p");
   taskTitle.classList.add("taskTitle");
   taskDescription.classList.add("taskDescription");
 
   taskTitle.innerText = title;
   taskDescription.innerText = description;
 
+  taskContainer.append(taskTitle);
+  taskContainer.append(taskDescription);
+
   let itemsList = document.querySelector(".itemsList");
-  itemsList.prepend(taskTitle);
-  itemsList.prepend(taskDescription);
+  itemsList.prepend(taskContainer);
+ 
+  
+  let totalElement = document.querySelector("#totalItems");
+  totalElement.innerText++;
+  let leftItems = document.querySelector("#leftItems");
+  leftItems.innerText++;
 
   closeModal();
 } 

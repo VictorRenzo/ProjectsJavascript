@@ -98,26 +98,6 @@ h1, h2{
   cursor: pointer;
 }
 
-.taskItemContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-.item{
-  width: 80%;
-  height: 3rem;
-  background: white;
-  padding: 0.2rem;
-  margin-top: 1rem;
-  border: 1px solid gray;
-  border-radius: 8px;
-
-}
-
 .itemTitle{
   width: 90%;
   border: none;
@@ -224,4 +204,20 @@ h1, h2{
 
 .buttonCancelAdd{
   background-color: rgb(193,140,252);
+}
+
+.taskContainer{
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(148, 145, 145, 0.8);
+}
+.taskTitle{
+  font-family:'Cormorant Garamond', 'Roboto', serif;
+  font-size: 1.2rem;
+  color:rgba(148, 145, 145, 0.8);
+}
+
+.taskDescription{
+  font-family:'Cormorant Garamond', 'Roboto', serif;
+  font-size: 1.8rem;
+  color:hsla(0, 3%, 7%, 0.8);
 }
