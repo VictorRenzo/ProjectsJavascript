@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>To-Do List Aprendizado Javascript</title>
+  <title>To-Do List</title>
   <link rel=stylesheet href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +16,11 @@
     <section class = "listContainer">
       <header class = "headerList">
         <button class = "taskCounter">Total: <b id = "totalItems">0</b></button>
-        <button class = "taskCounter">Restantes: <b id = "leftItems">0</b></button>
-        <button class = "taskCounter">Feito: <b id = "doneItems">0</b></button>
+        <button class = "taskCounter">To-Do: <b id = "leftItems">0</b></button>
+        <button class = "taskCounter">Done: <b id = "doneItems">0</b></button>
       </header>
       <section class = "itemsList"></section>
-      <button class = "addItem" onclick="createItem()">Adicionar tarefa</button>
+      <button class = "addItem" onclick="createItemModal()">Add Task</button>
     </section>
   </section>
 </body>
