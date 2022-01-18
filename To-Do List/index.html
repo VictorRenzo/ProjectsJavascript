@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>Aprendizado Javascript</title>
+  <title>To-Do List Aprendizado Javascript</title>
   <link rel=stylesheet href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,19 +10,19 @@
 </head>
 
 <body>
-  <div class = "containerAll">
-    <h1>Lista de Tarefas</h1>
-    <h2>Organize o que você tem para fazer hoje</h2>
+  <section class = "containerAll">
+    <h1>To-Do List</h1>
+    <h2>Do your tasks!</h2>
     <section class = "listContainer">
       <header class = "headerList">
-        <p class = "taskCounter">Total: <b id = "totalItems">0</b></p>
-        <p class = "taskCounter">Restantes: <b id = "leftItems">0</b></p>
-        <p class = "taskCounter">Feito: <b id = "doneItems">0</b></p>
+        <button class = "taskCounter">Total: <b id = "totalItems">0</b></button>
+        <button class = "taskCounter">Restantes: <b id = "leftItems">0</b></button>
+        <button class = "taskCounter">Feito: <b id = "doneItems">0</b></button>
       </header>
       <section class = "itemsList"></section>
       <button class = "addItem" onclick="createItem()">Adicionar tarefa</button>
     </section>
-  </div>
+  </section>
 </body>
 
 <script src = 'script.js'></script>
