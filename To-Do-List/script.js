@@ -4,6 +4,10 @@ function doneItem(){
 function removeItem(taskContainer, title){
   taskContainer.remove();
   window.localStorage.removeItem(title);
+  let totalElement = document.querySelector("#totalItems");
+  totalElement.innerText--;
+  let leftItems = document.querySelector("#leftItems");
+  leftItems.innerText-- ;
 }
 
 function createItemModal(){
